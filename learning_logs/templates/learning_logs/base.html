@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Base</title>
 </head>
 <body>
-    {% extends "learning_logs/base.html" %}
+    <a href="{% url 'index' %}">
+        Learning Log
+    </a> - 
+    <a href="{% url 'topics' %}">
+        Topics
+    </a>
 
     {% block content %}
         
