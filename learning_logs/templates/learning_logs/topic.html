@@ -9,12 +9,22 @@
     {% extends "learning_logs/base.html" %}
 
     {% block content %}
-        <h1>{{topic}}</h1>
+        <p>Tópico {{topic}}</p>
+
+        <p>Anotações:</p>
+
+        <p>
+            <a href="{% url 'new_entry' topic.id %}">Adicione uma nova anotação</a>
+        </p>
+
         <ul>
             {% for entry in entries %}
                 <li>
                     <p>{{entry.data_added | date:'M d, Y H:i'}}</p>
                     <p>{{entry.descricao | linebreaks}}</p>
+                    <p>
+                        <a href="{% url 'edit_entry' entry.id %}">Editar</a>
+                    </p>
                 </li>
             {% empty %}
                 <li>Não há registros adicionados para esse tópico</li>
