@@ -1,26 +1,36 @@
 from django.shortcuts import render
 from . models import Topic, Entry
 from .forms import TopicForm, EntryForm
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     """ Página principal do Learning_log """
     return render(request, 'learning_logs/index.html')
 
+@login_required
 def topics(request):
     """ Mostra todos os assuntos """
-    topics = Topic.objects.order_by('data_added')
+    topics = Topic.objects.filter(owner=request.user).order_by('data_added')
     context = {'topics': topics}
     return render(request, 'learning_logs/topics.html', context)
 
+@login_required
 def topic(request, topic_id):
     """ Mostra todos os assuntos e suas entradas """
     topic = Topic.objects.get(id = topic_id)
     entries = topic.entry_set.order_by('-data_added')
+
+    # garante que o assunto pertence ao usuário atual
+
+    if topic.owner != request.user:
+        raise Http404
+
     context = {'topic': topic, 'entries': entries}
     return render(request, 'learning_logs/topic.html', context)
 
+@login_required
 def new_topic(request):
     """ Adiciona um novo assunto """
     if request.method != 'POST':
@@ -28,15 +38,21 @@ def new_topic(request):
     else:
         form = TopicForm(request.POST)
         if form.is_valid():
-            form.save()
+            new_topic = form.save(commit=False)
+            new_topic.owner = request.user
+            new_topic.save()
             return HttpResponseRedirect(reverse('topics'))
         
     context = {'form': form}
     return render(request, 'learning_logs/new_topic.html', context)
 
+@login_required
 def new_entry(request, topic_id):
     """Acrescenta uma nova entrada em particular"""
     topic = Topic.objects.get(id=topic_id)
+
+    if topic.owner != request.user:
+        raise Http404
 
     if request.method != 'POST':
         form = EntryForm()
@@ -51,10 +67,14 @@ def new_entry(request, topic_id):
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
 
+@login_required
 def edit_entry(request, entry_id):
     """Edita uma entrada existente"""
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
+
+    if topic.owner != request.user:
+        raise Http404
 
     if request.method != 'POST':
         form = EntryForm(instance=entry)
