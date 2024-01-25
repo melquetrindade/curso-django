@@ -1,15 +1,77 @@
+{% load django_bootstrap5 %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base</title>
+    <meta name="description" content="Aplicação para anotações ">
+    <meta name="keywords" content="anotações, anotação">
+    <meta name="author" content="Melque Rodrigues">
+    <title>Learning Log</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
 </head>
 <body>
-    <p>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+        <div class="container">
+    
+            <a class="navbar-brand" href="{% url 'index' %}">Learning Log</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#listaMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="listaMenu">
+        
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'topics' %}">Topics</a>
+                    </li>
+                </ul>
+        
+                <ul class="navbar-nav me-right  navbar-right">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link"href="#">Olá, {{ user.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+                        </li>
+                       
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Registrar</a>
+                        </li>
+                       
+                    {% endif %}
+                </ul>
+        
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div>{% block header %}{% endblock header %}</div>
+        <div>{% block content %}{% endblock content %}</div>
+    </div>
+    
+</body>
+</html>
+
+
+
+<!--
+
+<p>
         <a href="{% url 'index' %}">
             Learning Log
-        </a> - 
+        </a>
         <a href="{% url 'topics' %}">
             Topics
         </a>
@@ -23,8 +85,37 @@
         {% endif %}
     </p>
 
-    {% block content %}
-        
-    {% endblock content %}
-</body>
-</html>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">Learning Log</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#listaMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="listaMenu">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a href="{% url 'topics' %}">Topics</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+-->

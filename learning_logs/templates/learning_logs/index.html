@@ -8,8 +8,14 @@
 <body>
     {% extends "learning_logs/base.html" %}
 
+    {% block header %}
+        <div class="container">
+            <h1 class="display-4">Acompanhe seu Aprendizado</h1>
+        </div>
+    {% endblock header %}
+
     {% block content %}
-        
+        <h5><a href="{% url 'register' %}">Crie uma conta</a> para utilizar o Learning Log!</h5>
     {% endblock content %}
 </body>
 </html>
