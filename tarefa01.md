@@ -1,24 +1,26 @@
 # Tarefa 01 - Git e GitHub com Markdown
 
-* Ketlly Azevedo de Medeiros
-* @Ketwy
-* ketlly.azevedo.090@gmail.com
+* Melque Rodrigues da Trindade Santos
+* @melquetrindade
+* melquetrindade654@gmail.com
 
-# SISTEMA DE COMPRA E VENDA DE LOJA DE ROUPAS
+# SigQueijaria
 
-Esse projeto tem como intuito desenvolver um sistema que seja capaz de auxiliar
-o administrador a gerenciar as vendas de sua loja de roupas. De modo que possa ser
-facilmente cadastrado todas as vendas realizadas e que o dono da loja possa observar o
-funcionamento da empresa com mais eficácia.
+O presente projeto tem o objetivo de desenvolver um sistema capaz de gerenciar tarefas do cotidiano de uma queijaria, 
+auxiliando assim, os funcionários e o gerente do estabelecimento. Com este software os seus usuários poderão, dentre outras possibilidades,
+cadastrar clientes, fornecedores, vendas realizadas e gerar relatórios pertinentes ao controle administrativo da queijaria.
 
 ## Equipe:
 
-* JOSÉ PEREIRA DE ARAÚJO MARQUES -  20210053266
-* KETLLY AZEVEDO DE MEDEIROS - 20210051842
-* VITOR DANIEL LÓCIO MEDEIROS - 20210055304
-* HUGO MURYEL MAIA FERNANDES DE ARAUJO - 20180044519
+* ERICK BEZERRA RIBEIRO TRINDADE -  20220055317
+* FELIPE SOUZA BENÍCIO DA SILVA - 20220043343
+* ISA KAILLANY SOARES PEREIRA - 20220043568
+* MANUELLY RODRIGUES VICTOR - 20220040682
+* MELQUE RODRIGUES DA TRINDADE SANTOS - 20220039190
+* THAMIRIS DE OLIVEIRA BORGES - 20220020877
 
-[Link para o repositório](https://github.com/vitordaniel31/sisvenda.git)
+
+[Link para o repositório](https://github.com/melquetrindade/sigQueijaria)
 
 ## Linguagem: 
 ### PHP:
