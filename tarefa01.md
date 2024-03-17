@@ -23,13 +23,26 @@ cadastrar clientes, fornecedores, vendas realizadas e gerar relatórios pertinen
 [Link para o repositório](https://github.com/melquetrindade/sigQueijaria)
 
 ## Linguagem: 
-### PHP:
-O PHP é uma linguagem de programação usada principalmente para criar sites interativos.
+### Python:
+O Python é uma linguagem de programação que foi construída para ter uma sintaxe simples de fácil compreensão e possuí uma versatilidade onde seria possível utiliza-la para diversas tarefas. Pode construir aplicativos, criar sites, desenvolver programas, criar jogos, fazer análise de dados, inteligência artificial, entre outras atividades. Além disso, é uma das linguagens de programação mais utilizadas no mundo e no Brasil. Ela está em constante crescimento e por consequência acaba sendo mais valorizada. 
 
-O PHP é popular porque é fácil de aprender e usar, com uma sintaxe simples e familiar. É também uma linguagem de código aberto, o que significa que é suportada por uma comunidade ativa de desenvolvedores em todo o mundo, que criam bibliotecas e recursos para ajudar a tornar o desenvolvimento web mais eficiente.
+Segue abaixo algumas vantagens de porque utilizar Python:
 
-Uma das grandes vantagens do PHP é sua integração nativa com bancos de dados, o que torna mais fácil para os sites acessarem informações armazenadas em bancos de dados, como informações de usuários, produtos ou outras informações dinâmicas.
+* Sintaxe clara e legível: Possui sintaxe simples e limpa, que é fácil de ler e escrever. Reduzindo a curva de aprendizado para novos desenvolvedores e facilitando a manutenção do código.
 
+* Linguagem de propósito amplo: É uma linguagem de propósito geral que pode ser usada em uma ampla variedade de domínios, desde desenvolvimento web e automação de tarefas até ciência de dados. Sua versatilidade torna o Python uma escolha atraente para uma variedade de projetos e aplicações.
+
+* Comunidade ativa e vasta biblioteca padrão: Python tem uma comunidade grande e ativa de desenvolvedores em todo o mundo. Isso resultou em uma vasta biblioteca padrão, que oferece uma ampla gama de módulos e funcionalidades prontas para uso.
+
+* Multiplataforma e portabilidade: Python é suportado em uma variedade de plataformas, incluindo Windows, macOS e Linux. Isso significa que os programas escritos em Python podem ser executados em diferentes sistemas operacionais sem a necessidade de modificação, proporcionando uma maior portabilidade.
+
+* Produtividade e rapidez de desenvolvimento: Python é conhecido por sua produtividade e rapidez de desenvolvimento. Sua sintaxe simples e recursos de alto nível permitem aos desenvolvedores criar aplicativos em menos linhas de código do que em outras linguagens, o que acelera o ciclo de desenvolvimento.
+
+Esses são alguns fatores que foram determinantes para a equipe escolher essa linguagem como a oficial para o desenvolvimento do sistema.
+
+O Django é um famoso framework, que oferece todas as ferramentas necessárias para construir uma aplicação web em um único pacote. Ele permite que você pule muitos passos iniciais para criação de uma aplicação padrão. Além disso, outra das vantagens do Django é que ele possui um painel de administração que permite um gerenciamento rápido do banco de dados, o que é uma grande economia de tempo e de trabalho.
+
+Outra grande vantagem do Django é o seu sistema de autenticação de usuários, que facilita a implementação de funcionalidades de autenticação e autorização em seus aplicativos web. Ele fornece uma série de recursos prontos para lidar com o registro de usuários, autenticação de login, gestão de permissões e outras tarefas relacionadas à identidade do usuário.
 
 ### Domínio da Linguagem:
 
