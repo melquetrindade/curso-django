@@ -47,8 +47,8 @@ Esses são alguns fatores que foram determinantes para a equipe escolher essa li
 Membro          | Domínio       | Experiência
 :--------------:|:-------------:|:-------:
 Erick Bezerra   | Intermediário     | 2 ano
-Felipe Souza  | Intermediário | 5 anos
-Isa Kaillany  | Intermediário | 1 ano
+Felipe Souza  | Intermediário | 2 anos
+Isa Kaillany  | Intermediário | 2 ano
 Manuelly Rodrigues | Iniciante     | Agora
 Melque Rodrigues  | Intermediário | 1 ano
 Thamiris Borges | Intermediário     | 1 ano
@@ -93,19 +93,21 @@ O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft, 
 
 ## Tutorial
 
-[Tutorial CRUD Laravel](https://imasters.com.br/php/como-fazer-um-crud-no-laravel-do-zero-parte-1)
+[Tutorial CRUD Django](https://awari.com.br/aprenda-a-criar-um-crud-com-python-e-django-guia-completo-para-iniciantes/)
 
-É um tutorial completo e útil para quem deseja aprender a criar um sistema CRUD em Laravel do zero. Ele fornece uma visão geral dos conceitos básicos do Laravel, bem como as etapas necessárias para configurar o banco de dados, criar rotas e controladores, e criar as visualizações para o usuário.
+É um tutorial completo e útil para quem deseja aprender a criar um sistema CRUD em Django do zero. Ele fornece uma visão geral dos conceitos básicos do Django, bem como a estrutura básica de um projeto, explica a criar o modelo de dados, configurar o banco de dados, visualizações para o usuário e criar os templates.
 
 ## Branches e Pull Request
-Uma branch é uma ramificação separada do código-fonte principal, permitindo que você trabalhe em recursos e correções separadas do código-fonte principal sem afetar diretamente o código-fonte em produção. Já o pull request é uma solicitação para que outros desenvolvedores revisem e analisem suas alterações antes que elas sejam mescladas.
+Uma branch é uma ramificação separada do código-fonte principal, permitindo que você trabalhe em recursos e correções separadas do código-fonte principal sem afetar diretamente o código-fonte em produção. Já o pull request é uma proposta para mesclar as alterações de um branch em outro. Em uma pull request, os colaboradores podem revisar e discutir o conjunto de alterações proposto antes de integrá-las à base de código principal. As pull requests exibem as diferenças, ou comparações, entre o conteúdo no branch de origem e aquele no branch de destino.
 
 ## Versionamento Semântico
 
-É uma convenção de nomenclatura para versionamento de software que estabelece regras claras e consistentes para o número de versão de um software, tornando mais fácil entender o significado das alterações em cada versão.
+O texto discute o problema do "inferno das dependências" no gerenciamento de software, onde a adição de pacotes e atualizações pode resultar em complicações e dificuldades. Propõe-se o "Versionamento Semântico" como uma solução para esse problema, definindo um conjunto de regras para atribuir e incrementar números de versão de forma clara e consistente. Essas regras baseiam-se em práticas comuns e estabelecidas no desenvolvimento de software, como a declaração de uma API pública e a comunicação de mudanças por meio de incrementos específicos nos números de versão. 
 
-O versionamento semântico é útil porque permite que os desenvolvedores entendam facilmente o significado de cada versão e como as alterações podem afetar a compatibilidade com versões anteriores. Além disso, ele ajuda a garantir a estabilidade do software, fornecendo uma estrutura consistente para a versão e a evolução do software.
+O texto destaca a importância de ter uma especificação formal para números de versão, que ajuda na comunicação de intenções e no gerenciamento de dependências. O "Versionamento Semântico" é descrito como uma maneira de tornar o inferno das dependências coisa do passado, fornecendo uma estrutura sensata para lançar e atualizar pacotes sem necessidade de atualizar para novas versões de pacotes dependentes. O texto encoraja os desenvolvedores a adotarem o "Versionamento Semântico" e a seguirem suas regras para beneficiar-se das vantagens dessa abordagem.
 
 ## Conventional Commits
 
-Conventional Commits é uma convenção de nomenclatura para mensagens de commit em projetos de software, que define um formato padronizado para as mensagens de commit. A convenção inclui um tipo de commit, um escopo opcional e uma descrição concisa do que foi alterado. Também define palavras-chave para fornecer informações adicionais sobre o commit. A adoção da convenção pode trazer benefícios para a documentação do histórico de alterações, clareza nas mensagens de commit e colaboração entre a equipe de desenvolvimento, além de ser suportada por várias ferramentas de desenvolvimento.
+Os Conventional Commits são uma convenção para padronizar as mensagens de commit em repositórios de controle de versão, como Git. Essa convenção define um formato específico para as mensagens de commit, dividindo-as em três partes principais: tipo, escopo e descrição. O tipo indica a natureza da mudança (por exemplo, "feat" para novas funcionalidades ou "fix" para correções de bugs), o escopo opcional especifica a parte do código afetada pela mudança e a descrição fornece uma explicação concisa do que foi feito. 
+
+O uso dos Conventional Commits ajuda a tornar o histórico de commits mais legível, facilitando a compreensão das mudanças realizadas ao longo do tempo e simplificando processos como geração de changelogs automáticos e automatização de lançamentos.
